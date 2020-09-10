@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Ewoud Brouwer"
-  avatar           : "images/bio-photo.JPG"
+  avatar           : "http://ewoudb33.github.io/images/bio-photo.JPG"
   bio              : "Data Science Portfolio"
   location         : "Rotterdam"
   email            :
