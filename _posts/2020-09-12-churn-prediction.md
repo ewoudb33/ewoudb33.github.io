@@ -10,15 +10,13 @@ This can be contractual, such as a customer who cancels their Netflix subscripti
 
 For this occasion, I will analyze a telecom dataset (source: Kaggle) and predict customer churn by using three different machine learning algorithms.
 
-## Parsing and cleaning
-First, the data has to be pulled into python and parsed into a Data Frame
-format to be able to apply machine learning techniques. I use the pandas library for this. I call the Data Frame telco (short for telecom company)
+The dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the Data Frame looks like this:
 
-Python code block:
-```python:
-    import pandas as pd #import pandas library
-    telco = pd.read_csv("Telco-Customer-Churn.csv") #read csv into pandas Data Frame
-```
-## Data transformation
-## Model fitting
-## Model tuning
+<img src="{{ site.url {{ site.baseurl }}/images/head_telco.png" alt = "head of telco dataset">
+
+The majority of the variables are categorical. I will transform them to numerical, either binary or with dummy variables, to meet the criteria of the
+machine learning algorithms.
+
+After exploring the data a bit, I discovered that 36.12 % of customers are churners. Furthermore, the distribution of contract type looks like this:
+
+<img src="{{ site.url {{ site.baseurl }}/images/contract.png" alt = "">
