@@ -3,8 +3,6 @@ layout: archive
 permalink: /data-science/
 title: "Data Science Posts By Tags"
 author_profile: true
-header:
-  image: "/images/landscape.jpg"
 ---
 
 {% include group-by-array collection=site.posts field="tags" %}
