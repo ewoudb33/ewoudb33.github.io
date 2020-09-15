@@ -33,7 +33,7 @@ Finally, the relation of tenure and churn reveals that most of the churners have
 <img src="{{ site.url {{ site.baseurl }}/images/tenure-churn.png" alt = "">
 
 ### Model fitting
-After transforming the data to a numerical scale and normalizing the continuous variables (to get closer to a normal distribution), I conducted three different machine learning algorithms: logistic regression, support vector machines, and random forests. Also, I removed the variables customer ID (because it’s useless for machine learning) and multiple lines (because it correlates heavily with the phone service feature).
+After transforming the data to a numerical scale and normalizing the continuous variables (to get closer to a normal distribution), I conducted three different machine learning algorithms: logistic regression, support vector machines, and random forests. Also, I removed the variable customer ID (because it’s useless for machine learning). 
 
 The variables that are left to train the model are Gender, SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling, MonthlyCharges, and TotalCharges.
 
