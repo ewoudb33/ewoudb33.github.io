@@ -33,7 +33,7 @@ Finally, the relation of tenure and churn reveals that most of the churners have
 <img src="{{ site.url {{ site.baseurl }}/images/tenure-churn.png" alt = "">
 
 ### Model fitting
-After transforming the data to a numerical scale and normalizing the continuous variables (to get closer to a normal distribution), I conducted three different machine learning algorithms: logistic regression, support vector machines, and random forests. Also, I removed the variable customer ID (because it’s useless for machine learning). 
+After transforming the data to a numerical scale and normalizing the continuous variables (to get closer to a normal distribution), I conducted three different machine learning algorithms: logistic regression, support vector machines, and random forests. Also, I removed the variable customer ID (because it’s useless for machine learning).
 
 The variables that are left to train the model are Gender, SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling, MonthlyCharges, and TotalCharges.
 
@@ -77,7 +77,8 @@ Below you can find a summary of the performance metrics of the three machine lea
 | Macro avg    | 0.75      | 0.70   | 0.72     | 2110    |
 | Weighted avg | 0.78      | 0.80   | 0.78     | 2110    |
 
-The logistic regression model has the highest performance with a precision of 68 percent (i.e. 68 percent of the customers which this model classifies as churners are actually churners) and an accuracy of 80 percent (i.e. of al the decisions the model made, 80 percent were correct).
+The logistic regression model has the highest performance with a precision of 68 percent (i.e. 68 percent of the customers which this model classifies as churners are actually churners) and an accuracy of 80 percent (i.e. of al the decisions the model made, 80 percent were correct). In contrast,
+the support vector model hasn't classified a single churner correctly.
 
 In the figure below you can find the feature importances of the logistic regression model.
 
@@ -87,4 +88,4 @@ According to the feature importances, customers who are in a month to month cont
 
 And customers who have a two-year contract, a DSL internet service, no multiple lines, and no paperless billing are less likely to churn.
 
-So far the basic models are doing quite well. In the next post, I am trying to get better performances by tuning the data and trying new techniques.
+So far the basic models, apart from the support vector machine model, are doing quite well . In the next post, I am trying to get better performances by tuning the data and trying new techniques.
