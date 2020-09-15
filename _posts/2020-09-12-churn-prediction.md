@@ -6,7 +6,7 @@ tags: ["Machine learning", "Python", "Churn"]
 
 Customer churn is when an existing customer stops doing business with a company (Peterson, 2020).
 
-For this project, I analyzed a telecom dataset (source: [https://www.kaggle.com/blastchar/telco-customer-churn]) and predicted customer churn by using three
+For this project, I analyzed a telecom dataset (source: <https://www.kaggle.com/blastchar/telco-customer-churn>) and predicted customer churn by using three
 different machine learning algorithms.
 
 The telecom dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the dataset look like this:
@@ -18,13 +18,11 @@ The majority of the variables are categorical. I transformed them into a numeric
 ### Exploratory Data Analysis
 After exploring the data, I discovered that 36.12 % of customers are churners. This seems quite high because the industry average is around 21 % annually (Mazareanu, 2018).
 
-<img src="{{ site.url {{ site.baseurl }}/images/churn_rate.png" alt = "">
+<img src="{{ site.url {{ site.baseurl }}/images/churn-rate.png" alt = "">
 
-The distribution of the contract type showed that most of the customers are in a month-to-month contract.
+The distribution of the contract type reveals that most of the customers are in a month-to-month contract.
 
 <img src="{{ site.url {{ site.baseurl }}/images/contract.png" alt = "">
-
-Month-to-month contracts are apparently the most popular.
 
 And after looking at the distribution of customer tenure, it seems that most customers just joined this company.
 
@@ -53,6 +51,7 @@ Below you can find a summary of the performance metrics of the three machine lea
 | Weighted avg | 0.79      | 0.80   | 0.79     | 2110    |
 
 
+
 **Classification report support vector machines**
 
 
@@ -64,6 +63,7 @@ Below you can find a summary of the performance metrics of the three machine lea
 | Accuracy     |           |        | 0.73     | 2110    |
 | Macro avg    | 0.37      | 0.50   | 0.42     | 2110    |
 | Weighted avg | 0.53      | 0.73   | 0.62     | 2110    |
+
 
 
 **Classification report random forest**
