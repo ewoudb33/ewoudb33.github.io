@@ -8,7 +8,7 @@ Customer churn is when an existing customer stops doing business with a company.
 
 For this occasion, I will analyze a telecom dataset (source: Kaggle) and predict customer churn by using three different machine learning algorithms.
 
-The dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the Data Frame looks like this:
+The dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the dataset looks like this:
 
 <img src="{{ site.url {{ site.baseurl }}/images/head_telco.png" alt = "head of telco dataset">
 
@@ -23,7 +23,7 @@ The distribution of contract type looks like this:
 
 <img src="{{ site.url {{ site.baseurl }}/images/contract.png" alt = "">
 
-Month-to-Month contracts are apparently the most popular.
+Month-to-month contracts are apparently the most popular.
 
 After looking at the distribution of customer tenure, it seems that most customers just joined this company.
 
@@ -40,6 +40,14 @@ After transforming the data to a numerical scale and normalizing the continuous 
 The classification reports below show the performance metrics of the three machine learning models:
 
 **classification report logistic regression**
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+
+
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
 | 0            | 0.83      | 0.90   | 0.86     | 1515    |
@@ -51,6 +59,7 @@ The classification reports below show the performance metrics of the three machi
 
 
 **classification report support vector machines**
+
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
 | 0            | 0.73      | 1.00   | 0.84     | 1541    |
@@ -62,6 +71,7 @@ The classification reports below show the performance metrics of the three machi
 
 
 **classification report random forest**
+
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
 | 0            | 0.83      | 0.91   | 0.87     | 1541    |
