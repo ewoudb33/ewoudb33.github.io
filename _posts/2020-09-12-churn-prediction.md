@@ -1,5 +1,5 @@
 ---
-title: "Machine learning project: Predicting customer churn with telecom data"
+title: "Machine learning project: predicting customer churn with telecom data"
 date: "2020-09-12"
 tags: ["Machine learning", "Python", "Churn"]
 ---
@@ -83,7 +83,7 @@ In the figure below you can find the feature importances of the logistic regress
 
 <img src="{{ site.url {{ site.baseurl }}/images/importances_lr.png" alt = "">
 
-According to the feature importances customers who are in a month to month contract, have a fiber optic internet service, pay by electronic check, or have no tech support are more likely to churn.
+According to the feature importances, customers who are in a month to month contract, have a fiber optic internet service, pay by electronic check, or have no tech support are more likely to churn.
 
 And customers who have a two-year contract, a DSL internet service, no multiple lines, and no paperless billing are less likely to churn.
 
