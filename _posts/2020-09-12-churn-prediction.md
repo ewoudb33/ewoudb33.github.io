@@ -32,21 +32,14 @@ After looking at the distribution of customer tenure, it seems that most custome
 The distribution of tenure and churn reveals that most of the churners, have a low tenure. In other words, customer who just joined the company seem to have a
 higher probability of leaving.
 
-<img src="{{ site.url {{ site.baseurl }}/images/churn-tenure.png" alt = "">
+<img src="{{ site.url {{ site.baseurl }}/images/tenure-churn.png" alt = "">
 
 ### Model fitting
 After transforming the data to a numerical scale and normalizing the continuous variables to get closer to a normal distribution, I conducted three different machine learning algorithms: logistic regression, support vector machines and random forest. The variables that are left to train the model are: Gender      , SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity,      DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling  , MonthlyCharges and TotalCharges.
 
 The classification reports below show the performance metrics of the three machine learning models:
 
-**classification report logistic regression**
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-
-
+**Classification report logistic regression**
 
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
@@ -58,7 +51,8 @@ The classification reports below show the performance metrics of the three machi
 | Weighted avg | 0.79      | 0.80   | 0.79     | 2110    |
 
 
-**classification report support vector machines**
+**Classification report support vector machines**
+
 
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
@@ -70,7 +64,7 @@ The classification reports below show the performance metrics of the three machi
 | Weighted avg | 0.53      | 0.73   | 0.62     | 2110    |
 
 
-**classification report random forest**
+**Classification report random forest**
 
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
@@ -80,3 +74,8 @@ The classification reports below show the performance metrics of the three machi
 | Accuracy     |           |        | 0.80     | 2110    |
 | Macro avg    | 0.75      | 0.70   | 0.72     | 2110    |
 | Weighted avg | 0.78      | 0.80   | 0.78     | 2110    |
+
+The logistic regression models has the highest performance with a precision of 68 percent (i.e. 68 percent of the customers who this model classifies as churners are actually churners) and an accuracy of 80 percent.
+
+So far is the basic model doing quite well. In the next post I am trying to
+get better performances by tuning the data and trying new techniques. 
