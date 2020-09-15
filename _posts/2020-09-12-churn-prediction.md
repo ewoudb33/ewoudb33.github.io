@@ -6,7 +6,7 @@ tags: ["Machine learning", "Python", "Churn"]
 
 Customer churn is when an existing customer stops doing business with a company.
 
-For this occasion, I will analyze a telecom dataset (source: Kaggle) and predict customer churn by using three different machine learning algorithms.
+For this occasion, I will analyze a telecom dataset (source: https://www.kaggle.com/blastchar/telco-customer-churn) and predict customer churn by using three different machine learning algorithms.
 
 The dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the dataset looks like this:
 
@@ -25,17 +25,17 @@ The distribution of contract type looks like this:
 
 Month-to-month contracts are apparently the most popular.
 
-After looking at the distribution of customer tenure, it seems that most customers just joined this company.
+After looking at the distribution of customer tenure, it seems that most  customers just joined this company.
 
 <img src="{{ site.url {{ site.baseurl }}/images/tenure.png" alt = "">
 
-The distribution of tenure and churn reveals that most of the churners, have a low tenure. In other words, customer who just joined the company seem to have a
+The distribution of tenure and churn reveals that most of the churners have a low tenure. In other words, customers who just joined the company seem to have a
 higher probability of leaving.
 
 <img src="{{ site.url {{ site.baseurl }}/images/tenure-churn.png" alt = "">
 
 ### Model fitting
-After transforming the data to a numerical scale and normalizing the continuous variables to get closer to a normal distribution, I conducted three different machine learning algorithms: logistic regression, support vector machines and random forest. The variables that are left to train the model are: Gender      , SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity,      DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling  , MonthlyCharges and TotalCharges.
+After transforming the data to a numerical scale and normalizing the continuous variables to get closer to a normal distribution, I conducted three different machine learning algorithms: logistic regression, support vector machines and random forest. The variables that are left to train the model are: Gender, SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity,      DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling, MonthlyCharges and TotalCharges.
 
 The classification reports below show the performance metrics of the three machine learning models:
 
@@ -77,5 +77,13 @@ The classification reports below show the performance metrics of the three machi
 
 The logistic regression models has the highest performance with a precision of 68 percent (i.e. 68 percent of the customers who this model classifies as churners are actually churners) and an accuracy of 80 percent.
 
+In the figure below you can find the feature importances of the logistic regression model.
+
+<img src="{{ site.url {{ site.baseurl }}/images/lr_importances.png" alt = "">
+
+According to the feature importance's: Customers who are in a month to month contract, have a fiber optic internet service, pay by electronic check or have no TechSupport are more likely to churn.
+
+And customers who have a two year contract, A DSL internet service, no multiple lines and no paperless billing are less likely to churn.
+
 So far is the basic model doing quite well. In the next post I am trying to
-get better performances by tuning the data and trying new techniques. 
+get better performances by tuning the data and trying new techniques.
