@@ -32,7 +32,7 @@ After looking at the distribution of customer tenure, it seems that most custome
 The distribution of tenure and churn reveals that most of the churners, have a low tenure. In other words, customer who just joined the company seem to have a
 higher probability of leaving.
 
-<img src="{{ site.url {{ site.baseurl }}/images/churn_tenure.png" alt = "">
+<img src="{{ site.url {{ site.baseurl }}/images/churn-tenure.png" alt = "">
 
 ### Model fitting
 After transforming the data to a numerical scale and normalizing the continuous variables to get closer to a normal distribution, I conducted three different machine learning algorithms: logistic regression, support vector machines and random forest. The variables that are left to train the model are: Gender      , SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity,      DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling  , MonthlyCharges and TotalCharges.
