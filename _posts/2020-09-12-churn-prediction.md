@@ -79,9 +79,9 @@ The logistic regression models has the highest performance with a precision of 6
 
 In the figure below you can find the feature importances of the logistic regression model.
 
-<img src="{{ site.url {{ site.baseurl }}/images/lr_importances.png" alt = "">
+<img src="{{ site.url {{ site.baseurl }}/images/importances_lr.png" alt = "">
 
-According to the feature importance's: Customers who are in a month to month contract, have a fiber optic internet service, pay by electronic check or have no TechSupport are more likely to churn.
+According to the feature importances: Customers who are in a month to month contract, have a fiber optic internet service, pay by electronic check or have no tech support are more likely to churn.
 
 And customers who have a two year contract, A DSL internet service, no multiple lines and no paperless billing are less likely to churn.
 
