@@ -35,9 +35,9 @@ Finally, the relation of tenure and churn reveals that most of the churners have
 ### Model fitting
 After transforming the data to a numerical scale and normalizing the continuous variables (to get closer to a normal distribution), I conducted three different machine learning algorithms: logistic regression, support vector machines, and random forests. Also, I removed the variable customer ID (because it’s useless for machine learning).
 
-The variables that are left to train the model are Gender, SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling, MonthlyCharges, and TotalCharges.
+The variables that are left to train the model are Gender, SeniorCitizen, Partner, Dependents, Tenure, PhoneService, OnlineSecurity, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, PaperlessBilling, MonthlyCharges, and TotalCharges. The dataset has been split to a 70 percent training dataset and 30 percent test dataset.
 
-Below you can find a summary of the performance metrics of the three machine learning models:
+Below you can find a summary of the performance metrics of the three machine learning models on the test dataset:
 
 **Classification report logistic regression**
 
