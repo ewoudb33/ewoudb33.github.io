@@ -32,7 +32,7 @@ The recall score represents the percentage of churners that the algorithm
 correctly classified as churners out of all the people that would actually churn.
 In my opinion is this measure the most important, because not identifying a churner
 causes a customer that silently leaves with a missed opportunity to convince him
-to stay.
+to stay. 
 
 Finally, the figure below represent the relation between the false positive rate
 and true positive rate of the balanced logistic regression model with an
