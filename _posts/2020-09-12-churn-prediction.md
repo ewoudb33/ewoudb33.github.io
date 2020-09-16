@@ -43,12 +43,12 @@ Below you can find a summary of the performance metrics of the three machine lea
 
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
-| 0            | 0.83      | 0.90   | 0.86     | 1515    |
-| 1            | 0.68      | 0.53   | 0.60     | 595     |
+| 0            | 0.85      | 0.90   | 0.87     | 1546    |
+| 1            | 0.66      | 0.53   | 0.60     | 564     |
 |              |           |        |          |         |
-| Accuracy     |           |        | 0.80     | 2110    |
-| Macro avg    | 0.75      | 0.72   | 0.73     | 2110    |
-| Weighted avg | 0.79      | 0.80   | 0.79     | 2110    |
+| Accuracy     |           |        | 0.81     | 2110    |
+| Macro avg    | 0.75      | 0.72   | 0.74     | 2110    |
+| Weighted avg | 0.80      | 0.81   | 0.80     | 2110    |
 
 
 
@@ -57,12 +57,12 @@ Below you can find a summary of the performance metrics of the three machine lea
 
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
-| 0            | 0.73      | 1.00   | 0.84     | 1541    |
-| 1            | 0.00      | 0.00   | 0.00     | 569     |
+| 0            | 0.83      | 0.92   | 0.87     | 1546    |
+| 1            | 0.67      | 0.47   | 0.55     | 564     |
 |              |           |        |          |         |
-| Accuracy     |           |        | 0.73     | 2110    |
-| Macro avg    | 0.37      | 0.50   | 0.42     | 2110    |
-| Weighted avg | 0.53      | 0.73   | 0.62     | 2110    |
+| Accuracy     |           |        | 0.80     | 2110    |
+| Macro avg    | 0.75      | 0.69   | 0.71     | 2110    |
+| Weighted avg | 0.79      | 0.80   | 0.79     | 2110    |
 
 
 
@@ -70,22 +70,23 @@ Below you can find a summary of the performance metrics of the three machine lea
 
 |              | Precision | Recall | F1-score | Support |
 |--------------|-----------|--------|----------|---------|
-| 0            | 0.83      | 0.91   | 0.87     | 1541    |
-| 1            | 0.67      | 0.49   | 0.56     | 569     |
+| 0            | 0.83      | 0.90   | 0.86     | 1546    |
+| 1            | 0.63      | 0.49   | 0.55     | 564     |
 |              |           |        |          |         |
-| Accuracy     |           |        | 0.80     | 2110    |
-| Macro avg    | 0.75      | 0.70   | 0.72     | 2110    |
-| Weighted avg | 0.78      | 0.80   | 0.78     | 2110    |
+| Accuracy     |           |        | 0.79     | 2110    |
+| Macro avg    | 0.73      | 0.69   | 0.71     | 2110    |
+| Weighted avg | 0.78      | 0.79   | 0.78     | 2110    |
 
-The logistic regression model has the highest performance with a precision of 68 percent (i.e. 68 percent of the customers which this model classifies as churners are actually churners) and an accuracy of 80 percent (i.e. of al the decisions the model made, 80 percent were correct). In contrast,
-the support vector model hasn't classified a single churner correctly.
+The logistic regression model has the highest performance with an accuracy of 81 percent (i.e., of al the decisions the model made, 81 percent were correct). More importantly, the F1 score (which represent the recall and precision of the algorithm) is the highest with 0.60. The two other models are doing okay. Keeping
+in mind that the accuracy is not everything, there is some space for improvement. To be specific, if the algorithm classified every customer of the test dataset as non-churners, it would still have an accuracy of 73.27 percent.
+(1546 / 2110).
 
 In the figure below you can find the feature importances of the logistic regression model.
 
-<img src="{{ site.url {{ site.baseurl }}/images/importances_lr.png" alt = "">
+<img src="{{ site.url {{ site.baseurl }}/images/importances-lr.png" alt = "">
 
-According to the feature importances, customers who are in a month to month contract, have a fiber optic internet service, pay by electronic check, or have no tech support are more likely to churn.
+According to the feature importances of the logistic regression model, customers who have higher total chargers, are in a month to month contract, have a fiber optic internet service, are a senior citizen or have no tech support are more likely to churn.
 
-And customers who have a two-year contract, a DSL internet service, no multiple lines, and no paperless billing are less likely to churn.
+And customers who have a high tenure, A two year contract or no multiple lines, are less likely to churn.
 
-So far the basic models, apart from the support vector machine model, are doing quite well . In the next post, I am trying to get better performances by tuning the data and trying new techniques.
+So far the basic models are doing quite well . In the next post, I am trying to get better performances by tuning the data and trying new techniques.
