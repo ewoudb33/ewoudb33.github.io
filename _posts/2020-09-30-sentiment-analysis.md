@@ -5,9 +5,9 @@ tags: ["Sentiment", "R", "Exploratary Data Analysis"]
 ---
 
 A couple of months ago I scraped some data from the bookreview website
-goodreads.com from one of my favourite novels A Very Private Gentleman.
+goodreads.com of one of my favourite novels A Very Private Gentleman.
 
-Today I will show some statistics and analytics of the analysis I did, which is
+Today I will show some stats of the analysis I did, which is
 called a sentiment analysis. With sentiment analysis you identify and quantify
 affective states of text.
 
@@ -16,7 +16,7 @@ Firstly, I looked at the distribution of the ratings.
 <img src="{{ site.url {{ site.baseurl }}/images/distribution_of_ratings.png"
 alt = "">
 
-As you can see is the distribution left skewed. We have to keep this in mind
+As you can see, the distribution is left skewed. We have to keep this in mind
 when we want to continue this analysis with machine learning. The average of user
 ratings is 3.65, which is according to goodreads between "I liked it" and "I
 really liked it".
@@ -28,7 +28,7 @@ can be found below.
 alt = "">
 
 This distribution is also very right skewed. Furthermore, In a user-review
-for "A very private gentleman" are 250 words used the most. This is an half paged
+for "A very private gentleman" are 250 words used the most. This is a half paged
 essay, which should give us enough information for the sentiment analysis.
 
 Let's look at the relation between review length and rating.
@@ -37,17 +37,15 @@ Let's look at the relation between review length and rating.
 alt = "">
 
 There seems to be an increasing trend from rating 3 to rating 5 of the review
-length, with exception of the 2 ratings. There are also a few outlier in the higher
+length, apart from the 2 ratings. There are also a few outliers in the higher
 ratings.
 
-Now, I calculated the average sentiment score per rating. This sentiment score is based
-on the Afinn Lexicion, which is based on a scale from -5 to +5.
+Then, I calculated the average sentiment score per rating. This sentiment score is based on the Afinn Lexicion, which is based on a scale from -5 to +5.
 How higher the score, how more positive the algorithms sees the review.
 
 <img src="{{ site.url {{ site.baseurl }}/images/average_sentiment_score.png"
 alt = "">
 
-Again, there is trend of a higher rating when the sentiment score is more positive.
-No surprise right? We can conclude that our sentiment algorithm is working.
+Again, there is a trend of a higher rating when the sentiment score is more positive. No surprise right? We can conclude that our sentiment algorithm is working.
 
 Next time I'll dive deeper in the data.
