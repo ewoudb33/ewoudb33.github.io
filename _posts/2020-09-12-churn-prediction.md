@@ -9,7 +9,7 @@ Customer churn is when an existing customer stops doing business with a company 
 For this project, I analyzed a telecom dataset (source: <https://www.kaggle.com/blastchar/telco-customer-churn>) and predicted customer churn by using three
 different machine learning algorithms.
 
-The telecom dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the dataset look like this:
+The telecom dataset has 20 features and 1 predictor that shows if a customer has churned or not (Yes = churned and No = not churned). The top 5 rows of the dataset looks like this:
 
 <img src="{{ site.url {{ site.baseurl }}/images/head_telco.png" alt = "head of telco dataset">
 
