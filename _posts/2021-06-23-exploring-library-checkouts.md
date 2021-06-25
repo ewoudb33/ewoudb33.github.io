@@ -69,7 +69,7 @@ SELECT * FROM dictionary WHERE (Code = 'acbk' OR Code = 'jcbk' OR Code =
       'acdvd' OR Code = 'accd' OR Code = 'jcdvd')
 ```
 
-The output tells us that the types Book: Adult/YA (1609307 checkouts),  (1470340 checkouts), DVD: Adult/YA	(1211824 checkouts), CD: Adult/YA (431129 checkouts), DVD: Juv Circulating(185383) are the most popular. I looked the translation of the item types (e.g., "acbk" ) up in the dictionary dataset.
+The output tells us that the types Book: Adult/YA (1609307 checkouts), Book: Juvenile (1470340 checkouts), DVD: Adult/YA	(1211824 checkouts), CD: Adult/YA (431129 checkouts), DVD: Juvenile Circulating (185383) are the most popular. I looked the translation of the item types (e.g., "acbk" ) up in the dictionary dataset.
 
 To make things more efficiently I joined the dictionary dataset with the checkouts dataset. The dictionary dataset provides information of the collection and item types.
 
@@ -125,6 +125,7 @@ Let's see which authors are the most popular.
 ```ruby
 SELECT sum(number_of_checkouts), Author FROM books_borrowed_details GROUP BY Author ORDER BY sum(number_of_checkouts) DESC
 ```
+
 | Number of Checkouts | Author             |
 |---------------------|--------------------|
 | 26645               | Willems, Mo        |
@@ -146,6 +147,7 @@ I also looked up two of my favourite Authors. You might remember Martin Booth fr
 SELECT * FROM books_borrowed_details WHERE Author LIKE
 'Christie%'
 ```
+
 | Number of Checkouts | Title                         |
 |---------------------|-------------------------------|
 | 104                 | Murder on the Orient Express  |
