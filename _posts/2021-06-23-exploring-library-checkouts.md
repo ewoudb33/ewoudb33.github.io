@@ -10,7 +10,7 @@ So I looked on the web for library data and found an interesting data source
 from a public library in the United States. It includes three datasets: checkouts
 data, inventory data and a dictionary to decode the checkouts information.
 
-I will focus first on the checkouts dataset, which consists of counts by title of checkout for all physical items from 2017.
+I will focus first on the checkout dataset, which consists of counts by title of checkout for all physical items from 2017.
 
 The origin of the data is a public library in Seattle, Washington. This library has 27 branches with 378,222 members. The collection consists of 2.3 million items.
 
@@ -20,7 +20,7 @@ I have two research questions:
 
 I will first explore the data by using SQL and try to answer the first question. For this occasion I used the sqldf package to be able to use SQL on dataframes in R.
 
-First, I looked at the top 5 rows of the checkouts dataset to get a feeling of the different columns and their values.
+First, I looked at the top 5 rows of the checkout dataset to get a feeling of the different columns and their values.
 
 ```ruby
 SELECT * FROM Library_checkouts LIMIT 5
@@ -71,7 +71,7 @@ SELECT * FROM dictionary WHERE (Code = 'acbk' OR Code = 'jcbk' OR Code =
 
 The output tells us that the types Book: Adult/YA (1609307 checkouts), Book: Juvenile (1470340 checkouts), DVD: Adult/YA	(1211824 checkouts), CD: Adult/YA (431129 checkouts), DVD: Juvenile Circulating (185383) are the most popular. I looked the translation of the item types (e.g., "acbk" ) up in the dictionary dataset.
 
-To make things more efficiently I joined the dictionary dataset with the checkouts dataset. The dictionary dataset provides information of the collection and item types.
+To make things more efficiently I joined the dictionary dataset with the checkout dataset. The dictionary dataset provides information of the collection and item types.
 
 ```ruby
 SELECT * FROM Library_checkouts LEFT JOIN dictionary ON  Library_checkouts.Collection = dictionary.Code
@@ -97,7 +97,7 @@ SELECT COUNT(Collection), Collection, Description FROM library_dictionary_join G
 | 150925              | ncdvd      | NC-Children's DVDs           |
 | 149371              | ncfic      | NC-Children's Fiction        |
 
-DVDs are on top, but it is misleading. There are probably many book categories, because the item type Book: Adult/YA ranked higher in the previous output. Interesting to see is that non fiction for New Adults (NA) seems to be more popular than fiction books. Moreover, children's categories ranks quite high in this Library. Other popular book fictional book genres are: NC-Easy Fiction (91673 checkouts), NA-Mysteries (72168 checkouts), NA-Sci-Fic/Fantasy (32019 checkouts). Less popular fictional book genres are: NA-Westerns (657 checkouts) and NA-Short Stories (308 checkouts).
+DVDs are on top, but it is misleading. There are probably many book categories, because the item type Book: Adult/YA ranked higher in the previous output. Interesting to see is that non fiction for New Adults (NA) seems to be more popular than fiction books. Moreover, children's categories ranks quite high in this library. Other popular book fictional book genres are: NC-Easy Fiction (91673 checkouts), NA-Mysteries (72168 checkouts), NA-Sci-Fic/Fantasy (32019 checkouts). Less popular fictional book genres are: NA-Westerns (657 checkouts) and NA-Short Stories (308 checkouts).
 
 Which items are the most popular in this library in 2017? I used the following query to get an answer.
 
