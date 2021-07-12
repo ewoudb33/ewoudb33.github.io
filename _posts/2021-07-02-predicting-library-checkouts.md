@@ -7,7 +7,7 @@ In the previous post, I explored checkouts, dictionary, and inventory data from 
 from data and can predict outcomes on new observations. Roughly spoken, you have two different areas: a regression and classification problem. With regression, you deal with a continuous dependent variable, and with classification, you have a discrete dependent variable (e.g. Yes or No). In this case study, I used regression, because the dependent variable is the number of checkouts, a continuous variable.
 
 When I first started this analysis, I thought it would make sense to use the following independent variables: ItemType, Collection, CheckoutDateTime, Author, PublicationYear, and Publisher. Later I realized that there were some problems with some of these variables, which I will explain later.
-The code I used for cleaning, preparing, and analyzing the data can be found on my GitHub.
+The code I used for cleaning, preparing, and analyzing the data can be found on my [GitHub](https://github.com/ewoudb33/portfolio-code/tree/main/library-checkouts)
 
 I started to create a final dataset, where one row represents one library item. You might remember the variable BibNumer, which corresponds to a unique item, from the previous article. I used that one to group by and then counted the number of rows per unique BiBnumber. That resulted in a new variable called number_of_checkouts, which will be my dependent variable.
 
