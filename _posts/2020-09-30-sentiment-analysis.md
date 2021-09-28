@@ -49,3 +49,6 @@ alt = "">
 Again, there is a trend of a higher rating when the sentiment score is more positive. No surprise right? We can conclude that our sentiment algorithm is working.
 
 Next time I'll dive deeper in the data.
+
+For further information about structuring textual information, I recommend this blog (it's in Dutch):
+[Conversie verbeteren](https://blog.fivides.nl/)
