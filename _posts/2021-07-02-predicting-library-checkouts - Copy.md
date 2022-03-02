@@ -27,3 +27,6 @@ I was a bit disappointed that the item types weren't significant, which means th
 What is interesting to know in this model is the accuracy of the model on the test dataset. Normally, with a classification problem, you would measure this in the percentage of correct guesses. For a regression model, this isn't a good measure, because it very hard to predict exactly the right number of checkouts. Therefore, I used the RMSE (Root of the mean squared error) to measure accuracy.
 
 On the training dataset, the RMSE is 32.4345. This is okay since there are some data points in the 100s or even 1000s. To be 32 off, on average, is not that bad. The RMSE on the test dataset was 33.57729. That's very good because it is pretty close to our training dataset. It seems that our model can predict something outside his 'world' with the same error rate. Still, this model is quite basic and may be improved by including the author and publisher variable, but with fewer levels.
+
+Note: I've made a dashboard based on this data. Check it out:
+[Library checkouts dashboard](https://public.tableau.com/app/profile/ewoud.brouwer/viz/Librarycheckouts/SeattleLibraryCheckouts2017_1)

@@ -176,4 +176,5 @@ And the murder on the Orient Express is the most popular Agatha Christie's.
 
 After this analysis I have quite a good feeling of this data. Next time I might try machine learning to predict book checkouts.
 
-Note: I've made a dashboard based on this data. Check it out: https://public.tableau.com/app/profile/ewoud.brouwer/viz/Librarycheckouts/SeattleLibraryCheckouts2017_1
+Note: I've made a dashboard based on this data. Check it out:
+[Library checkouts dashboard](https://public.tableau.com/app/profile/ewoud.brouwer/viz/Librarycheckouts/SeattleLibraryCheckouts2017_1)
